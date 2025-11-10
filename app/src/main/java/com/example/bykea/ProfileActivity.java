@@ -18,5 +18,9 @@ public class ProfileActivity extends AppCompatActivity {
         Button btnSavedPlaces = findViewById(R.id.btnSavedPlaces);
         btnSavedPlaces.setOnClickListener(v ->
                 startActivity(new Intent(this, SavedLocationsActivity.class)));
+        Button btnAccessibility = findViewById(R.id.btnAccessibility);
+        btnAccessibility.setOnClickListener(v ->
+                startActivity(new Intent(this, AccessibilityActivity.class)));
+
     }
 }
