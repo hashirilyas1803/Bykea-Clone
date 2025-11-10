@@ -6,8 +6,8 @@
     <color name="brandOnSurface">#111111</color>
     <color name="brandAccent">#2563EB</color>
     <color name="brandError">#EF4444</color>
-    <color name="bykeaGreen">#10B981</color>
     <color name="bykeaDark">#1E1E1E</color>
-    <color name="bykeaSurface">#2A2A2A</color>
+    <color name="bykeaSurface">#121212</color>
+    <color name="bykeaGreen">#00C853</color>
     <color name="bykeaText">#FFFFFF</color>
 </resources>

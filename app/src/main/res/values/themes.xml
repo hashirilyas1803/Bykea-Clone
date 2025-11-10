@@ -7,6 +7,6 @@
 
         <!-- Accessibility-friendly defaults -->
         <item name="android:textAllCaps">false</item>
-        <item name="android:fontFamily">@font/sans_serif_medium</item>
+        <item name="android:fontFamily">sans_serif_medium</item>
     </style>
 </resources>
