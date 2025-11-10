@@ -24,6 +24,11 @@
         <activity android:name=".LoginActivity" android:exported="false" />
         <activity android:name=".OtpActivity" android:exported="false" />
         <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".AccessibilityActivity" android:exported="false" />
+        <activity android:name=".HomeActivity" android:exported="false" />
+        <activity android:name=".LocationActivity" android:exported="false" />
+
+
     </application>
 
 </manifest>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/ride_option_bg"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp">
+
+    <ImageView
+        android:id="@+id/imgRideIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_bike"
+        android:contentDescription="Ride Icon"
+        app:tint="@color/bykeaText" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp">
+
+        <TextView
+            android:id="@+id/tvRideType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motorbike"
+            android:textStyle="bold"
+            android:textColor="@color/bykeaText" />
+
+        <TextView
+            android:id="@+id/tvRideDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 Passenger"
+            android:textColor="@color/bykeaTextHint"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvFare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="146"
+        android:textColor="@color/bykeaGreen"
+        android:textStyle="bold"
+        android:layout_marginEnd="8dp" />
+</LinearLayout>

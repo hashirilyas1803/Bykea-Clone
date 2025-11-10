@@ -3,4 +3,44 @@
     <string name="action_back">Back</string>
     <string name="action_next">Next</string>
     <string name="action_done">Done</string>
+    <!-- Titles -->
+    <string name="title_bykea">Bykea</string>
+    <string name="title_accessibility">Accessibility</string>
+
+    <!-- Accessibility toggles -->
+    <string name="screen_reader">Screen Reader</string>
+    <string name="screen_reader_desc">provides spoken feedback</string>
+    <string name="colorblind_mode">Colorblind Mode</string>
+    <string name="colorblind_mode_desc">adjust colors for clarity</string>
+    <string name="language">Language</string>
+    <string name="urdu">اردو</string>
+    <string name="larger_text">Larger Text</string>
+    <string name="larger_text_desc">increase global font size</string>
+
+    <!-- Home -->
+    <string name="ride">Ride</string>
+    <string name="helpline">Helpline</string>
+    <string name="delivery">Delivery</string>
+
+    <!-- Location -->
+    <string name="pickup_location">Pickup Location</string>
+    <string name="destination">Enter your Destination</string>
+    <string name="add_stop">Add</string>
+    <string name="use_current_location">Use current location</string>
+    <string name="continue_btn">Continue</string>
+
+    <!-- Toasts / demo -->
+    <string name="demo_open_accessibility">Opened Accessibility</string>
+    <string name="demo_ride">Ride selected</string>
+    <string name="demo_delivery">Delivery selected</string>
+    <string name="demo_saved">Preference saved</string>
+    <string name="choose_ride">Choose a ride</string>
+    <string name="find_ride">Find Ride</string>
+    <string name="motorbike">Motorbike</string>
+    <string name="motorbike_detail">1 Passenger</string>
+    <string name="car">Car</string>
+    <string name="car_detail">3-4 Passengers</string>
+    <string name="rickshaw">Rickshaw</string>
+    <string name="rickshaw_detail">3 Passengers</string>
+    <string name="map_placeholder_desc">Map placeholder</string>
 </resources>

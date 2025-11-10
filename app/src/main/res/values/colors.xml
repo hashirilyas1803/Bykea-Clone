@@ -10,4 +10,12 @@
     <color name="bykeaSurface">#121212</color>
     <color name="bykeaGreen">#00C853</color>
     <color name="bykeaText">#FFFFFF</color>
+    <color name="bykeaCard">#242628</color>
+    <color name="bykeaMuted">#9BA1A6</color>
+    <color name="bykeaStroke">#303338</color>
+    <color name="bykeaTextHint">#AAAAAA</color>
+
+    <!-- Optional for “colorblind mode” demo swap -->
+    <color name="bykeaYellow">#F9C74F</color>
+
 </resources>
