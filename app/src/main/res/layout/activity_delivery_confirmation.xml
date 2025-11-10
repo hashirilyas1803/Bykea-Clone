@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bykeaSurface"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:id="@+id/btnBackConfirm"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Back"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/bykeaGreen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bykea"
+                android:textColor="@color/bykeaGreen"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Map -->
+        <View
+            android:id="@+id/mapPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/map_placeholder"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Delivery Details"
+            android:textColor="@color/bykeaText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Pickup -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Up Address:"
+            android:textColor="@color/bykeaText"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etPickupAddress"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Pickup Address"
+            android:background="@drawable/edittext_bg"
+            android:textColor="@color/bykeaText"
+            android:textColorHint="@color/bykeaTextHint"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etPickupName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Name"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/bykeaText"
+            android:textColorHint="@color/bykeaTextHint" />
+
+        <EditText
+            android:id="@+id/etPickupMobile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/bykeaText"
+            android:textColorHint="@color/bykeaTextHint" />
+
+        <!-- Drop Off -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drop Off Address:"
+            android:textColor="@color/bykeaText"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etDropoffAddress"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Drop Off Address"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/bykeaText"
+            android:textColorHint="@color/bykeaTextHint" />
+
+        <EditText
+            android:id="@+id/etDropoffName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Name"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/bykeaText"
+            android:textColorHint="@color/bykeaTextHint" />
+
+        <EditText
+            android:id="@+id/etDropoffMobile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/bykeaText"
+            android:textColorHint="@color/bykeaTextHint" />
+
+        <Button
+            android:id="@+id/btnConfirmParcel"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Parcel Details"
+            android:backgroundTint="@color/bykeaGreen"
+            android:textColor="@color/bykeaText" />
+    </LinearLayout>
+</ScrollView>

@@ -31,6 +31,9 @@
         <activity android:name=".RideHistoryActivity" android:exported="false" />
         <activity android:name=".HelplineActivity" android:exported="false" />
         <activity android:name=".SavedLocationsActivity" android:exported="false" />
+        <activity android:name=".DeliveryDetailsActivity" android:exported="false" />
+        <activity android:name=".DeliveryConfirmationActivity" android:exported="false" />
+
     </application>
 
 </manifest>

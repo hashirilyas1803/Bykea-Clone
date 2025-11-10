@@ -1,11 +1,9 @@
 package com.example.bykea;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
@@ -16,26 +14,30 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         findViewById(R.id.btnMenu).setOnClickListener(v -> {
+            // Open Profile page instead of Accessibility
             startActivity(new Intent(this, ProfileActivity.class));
-            Toast.makeText(this, getString(R.string.demo_open_accessibility), Toast.LENGTH_SHORT).show();
         });
 
         LinearLayout cardRide = findViewById(R.id.cardRide);
         LinearLayout cardHelpline = findViewById(R.id.cardHelpline);
         LinearLayout cardDelivery = findViewById(R.id.cardDelivery);
 
+        // 🚗 RIDE → Location screen
         cardRide.setOnClickListener(v -> {
             startActivity(new Intent(this, LocationActivity.class));
-            Toast.makeText(this, getString(R.string.demo_ride), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Ride booking demo", Toast.LENGTH_SHORT).show();
         });
 
+        // ☎️ HELPLINE → Helpline screen
         cardHelpline.setOnClickListener(v -> {
-            // Open Helpline screen
-            Intent intent = new Intent(HomeActivity.this, HelplineActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(this, HelplineActivity.class));
         });
 
-        cardDelivery.setOnClickListener(v ->
-                Toast.makeText(this, getString(R.string.demo_delivery), Toast.LENGTH_SHORT).show());
+        // 📦 DELIVERY → DeliveryDetailsActivity (then flows to confirmation)
+        cardDelivery.setOnClickListener(v -> {
+            Intent intent = new Intent(this, DeliveryDetailsActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "Delivery demo", Toast.LENGTH_SHORT).show();
+        });
     }
 }

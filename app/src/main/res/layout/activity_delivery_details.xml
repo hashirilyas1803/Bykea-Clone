@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bykeaSurface"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:tint="@color/bykeaGreen"
+                android:contentDescription="Back"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bykea"
+                android:textColor="@color/bykeaGreen"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Map Section -->
+        <View
+            android:id="@+id/mapPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/map_placeholder"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Parcel Details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/bykeaDark"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTintMode="src_in">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Parcel Details"
+                android:textColor="@color/bykeaText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etParcelValue"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Parcel Value (PKR)"
+                android:inputType="number"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/bykeaText"
+                android:textColorHint="@color/bykeaTextHint"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:text="COD (Receive Cash for Parcel)"
+                    android:textColor="@color/bykeaText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Switch
+                    android:id="@+id/switchCOD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="@color/bykeaGreen"
+                    android:trackTint="@color/bykeaTextHint" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Who will pay?"
+                android:textColor="@color/bykeaText"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupPayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/rbYouPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You"
+                    android:textColor="@color/bykeaText"
+                    android:buttonTint="@color/bykeaGreen"
+                    android:layout_marginEnd="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rbReceiverPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receiver"
+                    android:textColor="@color/bykeaText"
+                    android:buttonTint="@color/bykeaGreen" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnFindCourier"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="FIND COURIER"
+            android:backgroundTint="@color/bykeaGreen"
+            android:textColor="@color/bykeaText"
+            android:textAllCaps="true" />
+    </LinearLayout>
+</ScrollView>
