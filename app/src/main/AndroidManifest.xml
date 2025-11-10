@@ -27,8 +27,10 @@
         <activity android:name=".AccessibilityActivity" android:exported="false" />
         <activity android:name=".HomeActivity" android:exported="false" />
         <activity android:name=".LocationActivity" android:exported="false" />
-
-
+        <activity android:name=".ProfileActivity" android:exported="false" />
+        <activity android:name=".RideHistoryActivity" android:exported="false" />
+        <activity android:name=".HelplineActivity" android:exported="false" />
+        <activity android:name=".SavedLocationsActivity" android:exported="false" />
     </application>
 
 </manifest>

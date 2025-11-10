@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bykeaSurface"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Helpline"
+            android:textColor="@color/bykeaGreen"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <!-- FAQ Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FAQs"
+            android:textColor="@color/bykeaGreen"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/bykeaDark"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Lost in an accident, now what?"
+                android:textColor="@color/bykeaText"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/bykeaTextHint"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="What are my payment options?"
+                android:textColor="@color/bykeaText"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/bykeaTextHint"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="My parcel got damaged during delivery, now what?"
+                android:textColor="@color/bykeaText"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp" />
+        </LinearLayout>
+
+        <!-- Complaint -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lodge a Complaint"
+            android:textColor="@color/bykeaGreen"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnWebPortal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Using our web portal"
+            android:backgroundTint="@color/bykeaDark"
+            android:textColor="@color/bykeaText"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Contact -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Us"
+            android:textColor="@color/bykeaGreen"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnCall"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="📞 123-123-123"
+            android:backgroundTint="@color/bykeaDark"
+            android:textColor="@color/bykeaText" />
+    </LinearLayout>
+</ScrollView>

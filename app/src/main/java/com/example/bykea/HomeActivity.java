@@ -16,7 +16,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         findViewById(R.id.btnMenu).setOnClickListener(v -> {
-            startActivity(new Intent(this, AccessibilityActivity.class));
+            startActivity(new Intent(this, ProfileActivity.class));
             Toast.makeText(this, getString(R.string.demo_open_accessibility), Toast.LENGTH_SHORT).show();
         });
 
@@ -30,9 +30,9 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         cardHelpline.setOnClickListener(v -> {
-            // Demo: open dialer
-            Intent dial = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:080012345"));
-            startActivity(dial);
+            // Open Helpline screen
+            Intent intent = new Intent(HomeActivity.this, HelplineActivity.class);
+            startActivity(intent);
         });
 
         cardDelivery.setOnClickListener(v ->

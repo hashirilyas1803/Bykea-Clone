@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bykeaSurface"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textColor="@color/bykeaGreen"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_profile_placeholder"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saad Imam"
+        android:textColor="@color/bykeaText"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⭐ 4.95"
+        android:textColor="@color/bykeaGreen"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnPersonalInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Personal Information"
+        android:backgroundTint="@color/bykeaDark"
+        android:textColor="@color/bykeaText"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnSavedPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saved Places"
+        android:backgroundTint="@color/bykeaDark"
+        android:textColor="@color/bykeaText"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnDownloadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Download Data"
+        android:backgroundTint="@color/bykeaDark"
+        android:textColor="@color/bykeaText"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnRideHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ride History"
+        android:backgroundTint="@color/bykeaGreen"
+        android:textColor="@color/bykeaText" />
+</LinearLayout>

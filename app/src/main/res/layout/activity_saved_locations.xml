@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bykeaSurface"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Locations"
+            android:textColor="@color/bykeaGreen"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/etAddLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add a new location"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:textColor="@color/bykeaText"
+            android:textColorHint="@color/bykeaTextHint"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Example saved places -->
+        <TextView
+            android:text="🏠 Home"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:background="@drawable/ic_history_item_bg"
+            android:textColor="@color/bykeaText"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:text="📍 Work"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:background="@drawable/ic_history_item_bg"
+            android:textColor="@color/bykeaText"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:text="🏋️‍♂️ Gym"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:background="@drawable/ic_history_item_bg"
+            android:textColor="@color/bykeaText"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

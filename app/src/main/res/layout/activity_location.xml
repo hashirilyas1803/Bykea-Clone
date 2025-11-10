@@ -1,112 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/bykeaSurface"
-    android:padding="16dp"
+    android:fillViewport="true"
     tools:context=".LocationActivity">
 
-    <!-- Header with Back Button + Title -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="8dp">
-
-        <ImageView
-            android:id="@+id/btnBack"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_media_previous"
-            android:contentDescription="Back"
-            android:layout_marginEnd="8dp"
-            app:tint="@color/bykeaGreen" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bykea"
-            android:textColor="@color/bykeaGreen"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <!-- Pickup and Destination -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/bykeaDark"
-        android:padding="12dp"
-        android:layout_marginBottom="8dp"
-        android:elevation="4dp"
-        android:clipToOutline="true">
+        android:padding="16dp">
 
-        <EditText
-            android:id="@+id/etPickup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Pickup Location"
-            android:background="@drawable/edittext_bg"
-            android:inputType="text"
-            android:textColor="@color/bykeaText"
-            android:textColorHint="@color/bykeaTextHint"
-            android:drawableEnd="@drawable/ic_add"
-            android:padding="10dp"
-            android:layout_marginBottom="8dp" />
-
-        <EditText
-            android:id="@+id/etDestination"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter your Destination"
-            android:background="@drawable/edittext_bg"
-            android:inputType="text"
-            android:textColor="@color/bykeaText"
-            android:textColorHint="@color/bykeaTextHint"
-            android:padding="10dp" />
-    </LinearLayout>
-
-    <!-- Static Map -->
-    <FrameLayout
-        android:id="@+id/mapPlaceholder"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@drawable/map_placeholder"
-        android:layout_marginBottom="8dp" />
-
-    <!-- Ride Options -->
-    <LinearLayout
-        android:id="@+id/rideSelectionPanel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/bykeaDark"
-        android:padding="16dp"
-        android:elevation="8dp"
-        android:layout_marginTop="4dp"
-        android:clipToOutline="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Choose a ride"
-            android:textStyle="bold"
-            android:textColor="@color/bykeaText"
-            android:textSize="16sp"
-            android:layout_marginBottom="12dp" />
-
+        <!-- ====== HEADER ====== -->
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:tint="@color/bykeaGreen"
+                android:contentDescription="Back"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bykea"
+                android:textColor="@color/bykeaGreen"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- ====== MAIN INPUT LAYOUT ====== -->
+        <LinearLayout
+            android:id="@+id/locationInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Motorbike -->
+            <EditText
+                android:id="@+id/etPickup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pickup Location"
+                android:background="@drawable/edittext_bg"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/bykeaText"
+                android:textColorHint="@color/bykeaTextHint"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etDestination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Destination"
+                android:background="@drawable/edittext_bg"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/bykeaText"
+                android:textColorHint="@color/bykeaTextHint"
+                android:layout_marginBottom="12dp" />
+
+            <View
+                android:id="@+id/mapPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/map_placeholder"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose a ride"
+                android:textColor="@color/bykeaText"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/rideOptionsGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbBike"
+                    style="@style/BykeaRideOption"
+                    android:text="Motorbike  (₨146)" />
+
+                <RadioButton
+                    android:id="@+id/rbCar"
+                    style="@style/BykeaRideOption"
+                    android:text="Car  (₨512)" />
+
+                <RadioButton
+                    android:id="@+id/rbRickshaw"
+                    style="@style/BykeaRideOption"
+                    android:text="Rickshaw  (₨212)" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/customFareLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/bykeaDark"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Custom Fare"
+                    android:textColor="@color/bykeaText"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etCustomFare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="PKR"
+                    android:inputType="number"
+                    android:background="@drawable/edittext_bg"
+                    android:padding="12dp"
+                    android:textColor="@color/bykeaText"
+                    android:textColorHint="@color/bykeaTextHint" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnFindRide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FIND RIDE"
+                android:backgroundTint="@color/bykeaGreen"
+                android:textColor="@color/bykeaText"
+                android:textAllCaps="true"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- ====== DRIVER OFFER LAYOUT (Initially Hidden) ====== -->
+        <LinearLayout
+            android:id="@+id/driverOfferLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="16dp"
+            android:background="@color/bykeaDark"
+            android:layout_marginTop="16dp">
+
+            <!-- Driver Info Card -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -114,129 +171,125 @@
                 android:gravity="center_vertical"
                 android:background="@drawable/ride_option_bg"
                 android:padding="12dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="16dp">
 
                 <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@drawable/ic_bike"
-                    android:contentDescription="Motorbike"
-                    android:tint="@color/bykeaText" />
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_driver"
+                    android:contentDescription="Driver"
+                    android:layout_marginEnd="8dp" />
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="8dp">
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:text="Motorbike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 mins away"
                         android:textColor="@color/bykeaText"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:text="1 Passenger"
-                        android:textColor="@color/bykeaTextHint"
-                        android:textSize="12sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Asif Gul • ★4.95"
+                        android:textColor="@color/bykeaTextHint" />
                 </LinearLayout>
 
-                <TextView
-                    android:text="₨146"
-                    android:textColor="@color/bykeaGreen"
-                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/btnAccept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Accept"
+                    android:backgroundTint="@color/bykeaGreen"
+                    android:textColor="@color/bykeaText"
+                    android:layout_marginEnd="4dp" />
+
+                <Button
+                    android:id="@+id/btnReject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Reject"
+                    android:backgroundTint="@color/bykeaSurface"
+                    android:textColor="@color/bykeaText" />
             </LinearLayout>
 
-            <!-- Car -->
+            <!-- Fare + Controls -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:background="@drawable/ride_option_bg"
-                android:padding="12dp"
-                android:layout_marginBottom="8dp">
-
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@drawable/ic_car"
-                    android:contentDescription="Car"
-                    android:tint="@color/bykeaText" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="8dp">
-
-                    <TextView
-                        android:text="Car"
-                        android:textColor="@color/bykeaText"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:text="3-4 Passengers"
-                        android:textColor="@color/bykeaTextHint"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <TextView
-                    android:text="₨512"
-                    android:textColor="@color/bykeaGreen"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <!-- Rickshaw -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
+                android:orientation="vertical"
                 android:background="@drawable/ride_option_bg"
                 android:padding="12dp">
 
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@drawable/ic_rickshaw"
-                    android:contentDescription="Rickshaw"
-                    android:tint="@color/bykeaText" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="8dp">
+                    android:text="Motorbike"
+                    android:textColor="@color/bykeaText"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
 
-                    <TextView
-                        android:text="Rickshaw"
+                <!-- Fare Controls -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <Button
+                        android:id="@+id/btnDecreaseFare"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/bykeaSurface"
                         android:textColor="@color/bykeaText"
-                        android:textStyle="bold" />
+                        android:layout_marginEnd="8dp" />
 
                     <TextView
-                        android:text="3 Passengers"
-                        android:textColor="@color/bykeaTextHint"
-                        android:textSize="12sp" />
+                        android:id="@+id/tvOfferedFare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/bykeaGreen"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical" />
+
+                    <Button
+                        android:id="@+id/btnIncreaseFare"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/bykeaSurface"
+                        android:textColor="@color/bykeaText"
+                        android:layout_marginStart="8dp" />
                 </LinearLayout>
 
-                <TextView
-                    android:text="₨212"
-                    android:textColor="@color/bykeaGreen"
-                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/btnKeepLooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="KEEP LOOKING"
+                    android:backgroundTint="@color/bykeaText"
+                    android:textColor="@color/bykeaDark"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btnCancelRide"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="CANCEL RIDE"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:textColor="@color/bykeaText" />
             </LinearLayout>
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btnFindRide"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="FIND RIDE"
-            android:backgroundTint="@color/bykeaGreen"
-            android:textColor="@color/bykeaText"
-            android:textAllCaps="true"
-            android:layout_marginTop="16dp" />
     </LinearLayout>
-</LinearLayout>
+</ScrollView>
